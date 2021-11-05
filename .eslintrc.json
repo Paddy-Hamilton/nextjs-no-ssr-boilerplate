@@ -1,0 +1,88 @@
+{
+  "root": true,
+  "extends": ["airbnb", "prettier", "plugin:@typescript-eslint/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "prettier",
+    "jest",
+    "@typescript-eslint",
+    "react-hooks",
+    "import"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-unused-expressions": "off",
+    "no-unused-vars": "off",
+    "no-use-before-define": "off",
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "func-names": "off",
+    "react/jsx-curly-newline": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/forbid-prop-types": "off",
+    "react/no-danger": "off",
+    "@typescript-eslint/no-unused-expressions": [
+      "error",
+      { "allowShortCircuit": true }
+    ],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "import/prefer-default-export": "off",
+    "import/no-named-as-default": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.tsx"],
+      "rules": {
+        "react/prop-types": "off",
+        "react/require-default-props": "off"
+      }
+    }
+  ],
+  "globals": {
+    "fetch": true
+  },
+  "env": {
+    "jest": true,
+    "browser": true
+  },
+  "settings": {
+    "paths": ["."],
+    "import/resolver": {
+      "typescript": {},
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      },
+      "alias": {
+        "map": [["@component/*", "components/*"]],
+        "extensions": [".ts", ".js", ".tsx", ".jsx", ".json"]
+      }
+    }
+  }
+}
