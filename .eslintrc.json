@@ -2,13 +2,7 @@
   "root": true,
   "extends": ["airbnb", "prettier", "plugin:@typescript-eslint/recommended"],
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "prettier",
-    "jest",
-    "@typescript-eslint",
-    "react-hooks",
-    "import"
-  ],
+  "plugins": ["prettier", "jest", "@typescript-eslint", "react-hooks", "import"],
   "rules": {
     "prettier/prettier": "error",
     "no-unused-expressions": "off",
@@ -23,10 +17,7 @@
     "react/jsx-props-no-spreading": "off",
     "react/forbid-prop-types": "off",
     "react/no-danger": "off",
-    "@typescript-eslint/no-unused-expressions": [
-      "error",
-      { "allowShortCircuit": true }
-    ],
+    "@typescript-eslint/no-unused-expressions": ["error", { "allowShortCircuit": true }],
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-unused-vars": ["error"],
     "@typescript-eslint/no-use-before-define": ["error"],
@@ -80,7 +71,11 @@
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       },
       "alias": {
-        "map": [["@component/*", "components/*"]],
+        "map": [
+          ["@components/*", "components/*"],
+          ["@utils/*", "utils/*"],
+          ["@reducers/*", "utils/store/reducers/*"]
+        ],
         "extensions": [".ts", ".js", ".tsx", ".jsx", ".json"]
       }
     }

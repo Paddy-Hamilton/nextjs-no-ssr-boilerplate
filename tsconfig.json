@@ -15,10 +15,11 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "paths": {
-      "@app/*": ["app/*"],
-      "@component/*": ["components/*"]
+      "@utils/*": ["utils/*"],
+      "@components/*": ["components/*"],
+      "@reducers/*": ["utils/store/reducers/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/utils/store/index.js"],
   "exclude": ["node_modules"]
 }
